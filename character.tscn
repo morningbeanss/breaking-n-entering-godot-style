@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://o3cilc3dr56l" path="res://assets/characters/robber_back.png" id="1_pjt0s"]
 [ext_resource type="Script" uid="uid://ct0yk2op8jx46" path="res://character.gd" id="1_wfnr8"]
 [ext_resource type="Texture2D" uid="uid://c5g0piyquj6rl" path="res://assets/characters/robber_front.png" id="2_wa5vi"]
+[ext_resource type="Texture2D" uid="uid://drsr3ls82fdeo" path="res://assets/characters/robber_left.png" id="4_0qfo5"]
 [ext_resource type="Script" uid="uid://br2hubxubbstu" path="res://animated_sprite_2d.gd" id="4_px5sl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wfnr8"]
@@ -32,6 +33,18 @@ region = Rect2(0, 2, 11, 14)
 [sub_resource type="AtlasTexture" id="AtlasTexture_jb3kq"]
 atlas = ExtResource("2_wa5vi")
 region = Rect2(0, 30, 11, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1b4b"]
+atlas = ExtResource("4_0qfo5")
+region = Rect2(0, 0, 11, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tnxx"]
+atlas = ExtResource("4_0qfo5")
+region = Rect2(0, 15, 11, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwfjh"]
+atlas = ExtResource("4_0qfo5")
+region = Rect2(0, 30, 11, 15)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c1b4b"]
 animations = [{
@@ -68,6 +81,23 @@ animations = [{
 "loop": true,
 "name": &"robber front",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1b4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tnxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1b4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwfjh")
+}],
+"loop": true,
+"name": &"robber left",
+"speed": 5.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1032090806]
@@ -77,7 +107,5 @@ script = ExtResource("1_wfnr8")
 position = Vector2(18.75, 26)
 scale = Vector2(4.409091, 4.714286)
 sprite_frames = SubResource("SpriteFrames_c1b4b")
-animation = &"robber back"
-frame = 2
-frame_progress = 0.5982795
+animation = &"robber left"
 script = ExtResource("4_px5sl")
