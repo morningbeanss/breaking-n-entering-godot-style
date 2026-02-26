@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b4ungvra7n76g"]
+
+[ext_resource type="PackedScene" uid="uid://di6w4gcsmlu3s" path="res://assets/basicCity.tmj" id="1_7718i"]
+
+[node name="basicCity" unique_id=749917893 instance=ExtResource("1_7718i")]

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b8lwm1y0ne0hr"]
+
+[ext_resource type="PackedScene" uid="uid://dxx0rrxcegpsk" path="res://assets/inventory.tmj" id="1_pohso"]
+
+[node name="inventory" unique_id=1333253047 instance=ExtResource("1_pohso")]

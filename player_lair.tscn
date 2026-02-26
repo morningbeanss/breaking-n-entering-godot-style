@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cpqoqmjgljyqe"]
+
+[ext_resource type="PackedScene" uid="uid://d2itoo8djcfgo" path="res://assets/player_lair.tmj" id="1_kcm5k"]
+[ext_resource type="PackedScene" uid="uid://bffs0mpyhxwm4" path="res://character.tscn" id="2_vb3wq"]
+
+[node name="player_lair" unique_id=1610700563 instance=ExtResource("1_kcm5k")]
+scale = Vector2(3.3200002, 3.1199996)
+
+[node name="CharacterBody2D" parent="." index="6" unique_id=1032090806 instance=ExtResource("2_vb3wq")]
+position = Vector2(39.457832, 68.58977)
+scale = Vector2(0.38913384, 0.40721524)
