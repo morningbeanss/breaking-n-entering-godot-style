@@ -1,11 +1,217 @@
 [gd_scene format=3 uid="uid://cpqoqmjgljyqe"]
 
 [ext_resource type="PackedScene" uid="uid://d2itoo8djcfgo" path="res://assets/player_lair.tmj" id="1_kcm5k"]
+[ext_resource type="Texture2D" uid="uid://c1c40a1a1ewtj" path="res://assets/urban1.png" id="2_15kvl"]
 [ext_resource type="PackedScene" uid="uid://bffs0mpyhxwm4" path="res://character.tscn" id="2_vb3wq"]
+[ext_resource type="Texture2D" uid="uid://dpiuljqk63gqw" path="res://assets/urban2.png" id="3_ohrro"]
+[ext_resource type="Texture2D" uid="uid://bknmebke8igvy" path="res://assets/interior2/Tiled_files/Interior.png" id="4_4wkbm"]
+[ext_resource type="Texture2D" uid="uid://pjfm7qyhjwmr" path="res://assets/kennyIndoor_transparent.png" id="5_26r23"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15kvl"]
+texture = ExtResource("2_15kvl")
+separation = Vector2i(1, 1)
+17:4/0 = 0
+17:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:4/0 = 0
+18:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:4/0 = 0
+19:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:6/0 = 0
+17:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:6/0 = 0
+18:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:6/0 = 0
+19:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:7/0 = 0
+18:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:7/0 = 0
+17:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+8:9/0 = 0
+3:10/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+5:8/0 = 0
+13:14/0 = 0
+7:13/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:8/0 = 0
+12:11/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ohrro"]
+texture = ExtResource("3_ohrro")
+separation = Vector2i(1, 1)
+27:19/0 = 0
+35:9/0 = 0
+26:22/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wkbm"]
+texture = ExtResource("4_4wkbm")
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:24/0 = 0
+12:25/0 = 0
+8:24/0 = 0
+8:23/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_26r23"]
+texture = ExtResource("5_26r23")
+separation = Vector2i(1, 1)
+6:0/0 = 0
+15:16/0 = 0
+16:12/0 = 0
+18:13/0 = 0
+15:17/0 = 0
+8:15/0 = 0
+8:14/0 = 0
+13:3/0 = 0
+12:1/0 = 0
+2:7/0 = 0
+6:1/0 = 0
+21:9/0 = 0
+21:10/0 = 0
+21:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o7ctd"]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_15kvl")
+sources/1 = SubResource("TileSetAtlasSource_ohrro")
+sources/2 = SubResource("TileSetAtlasSource_4wkbm")
+sources/3 = SubResource("TileSetAtlasSource_26r23")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7ctd"]
+texture = ExtResource("2_15kvl")
+separation = Vector2i(1, 1)
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+18:7/0 = 0
+17:7/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+8:9/0 = 0
+3:10/0 = 0
+3:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:13/0 = 0
+4:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:13/0 = 0
+5:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:13/0 = 0
+6:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:10/0 = 0
+4:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:10/0 = 0
+5:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:8/0 = 0
+13:14/0 = 0
+7:13/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:8/0 = 0
+12:11/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x8c1w"]
+texture = ExtResource("3_ohrro")
+separation = Vector2i(1, 1)
+27:19/0 = 0
+35:9/0 = 0
+26:22/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r3r18"]
+texture = ExtResource("4_4wkbm")
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:24/0 = 0
+12:25/0 = 0
+8:24/0 = 0
+8:23/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fk467"]
+texture = ExtResource("5_26r23")
+separation = Vector2i(1, 1)
+6:0/0 = 0
+15:16/0 = 0
+16:12/0 = 0
+18:13/0 = 0
+15:17/0 = 0
+8:15/0 = 0
+8:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:14/0 = 0
+8:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:3/0 = 0
+13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:1/0 = 0
+12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+21:9/0 = 0
+21:10/0 = 0
+21:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uqfoo"]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_o7ctd")
+sources/1 = SubResource("TileSetAtlasSource_x8c1w")
+sources/2 = SubResource("TileSetAtlasSource_r3r18")
+sources/3 = SubResource("TileSetAtlasSource_fk467")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vb3wq"]
+size = Vector2(10.843378, 6.089717)
 
 [node name="player_lair" unique_id=1610700563 instance=ExtResource("1_kcm5k")]
 scale = Vector2(3.3200002, 3.1199996)
 
+[node name="walls" parent="." index="0" unique_id=472239499]
+tile_set = SubResource("TileSet_o7ctd")
+
+[node name="decoration-solid-obj" parent="." index="2" unique_id=787751507]
+tile_set = SubResource("TileSet_uqfoo")
+
+[node name="decoration" parent="." index="3" unique_id=1392873959]
+z_index = 1
+
 [node name="CharacterBody2D" parent="." index="6" unique_id=1032090806 instance=ExtResource("2_vb3wq")]
-position = Vector2(39.457832, 68.58977)
-scale = Vector2(0.38913384, 0.40721524)
+position = Vector2(71.98795, 133.65387)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" index="1" unique_id=830886896]
+position = Vector2(-7.6293945e-06, 3.0448608)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_vb3wq")

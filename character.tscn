@@ -101,11 +101,10 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1032090806]
+position = Vector2(1, 10)
 script = ExtResource("1_wfnr8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=363403068]
-position = Vector2(18.75, 26)
-scale = Vector2(4.409091, 4.714286)
 sprite_frames = SubResource("SpriteFrames_c1b4b")
-animation = &"robber left"
+animation = &"robber front"
 script = ExtResource("4_px5sl")
