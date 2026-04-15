@@ -192,11 +192,8 @@ sources/1 = SubResource("TileSetAtlasSource_x8c1w")
 sources/2 = SubResource("TileSetAtlasSource_r3r18")
 sources/3 = SubResource("TileSetAtlasSource_fk467")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vb3wq"]
-size = Vector2(10.843378, 6.089717)
-
 [node name="player_lair" unique_id=1610700563 instance=ExtResource("1_kcm5k")]
-scale = Vector2(3.3200002, 3.1199996)
+scale = Vector2(5.32, 5)
 
 [node name="walls" parent="." index="0" unique_id=472239499]
 tile_set = SubResource("TileSet_o7ctd")
@@ -207,11 +204,11 @@ tile_set = SubResource("TileSet_uqfoo")
 [node name="decoration" parent="." index="3" unique_id=1392873959]
 z_index = 1
 
-[node name="CharacterBody2D" parent="." index="6" unique_id=1032090806 instance=ExtResource("2_vb3wq")]
-position = Vector2(71.98795, 133.65387)
-collision_mask = 2
+[node name="shelf-decor" parent="." index="4" unique_id=1880952987]
+position = Vector2(0, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" index="1" unique_id=830886896]
-position = Vector2(-7.6293945e-06, 3.0448608)
-scale = Vector2(1, 1.0000001)
-shape = SubResource("RectangleShape2D_vb3wq")
+[node name="door" parent="." index="5" unique_id=702318854]
+position = Vector2(0, 0)
+
+[node name="CharacterBody2D" parent="." index="6" unique_id=1032090806 instance=ExtResource("2_vb3wq")]
+position = Vector2(44.172928, 97.2)

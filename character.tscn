@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c5g0piyquj6rl" path="res://assets/characters/robber_front.png" id="2_wa5vi"]
 [ext_resource type="Texture2D" uid="uid://drsr3ls82fdeo" path="res://assets/characters/robber_left.png" id="4_0qfo5"]
 [ext_resource type="Script" uid="uid://br2hubxubbstu" path="res://animated_sprite_2d.gd" id="4_px5sl"]
+[ext_resource type="Texture2D" uid="uid://dlnp6y8vo23us" path="res://assets/characters/robber_right.png" id="5_0qfo5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wfnr8"]
 atlas = ExtResource("1_pjt0s")
@@ -46,6 +47,18 @@ region = Rect2(0, 15, 11, 15)
 atlas = ExtResource("4_0qfo5")
 region = Rect2(0, 30, 11, 15)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1sy7"]
+atlas = ExtResource("5_0qfo5")
+region = Rect2(0, 0, 11, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sm1rv"]
+atlas = ExtResource("5_0qfo5")
+region = Rect2(0, 15, 11, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jx0ln"]
+atlas = ExtResource("5_0qfo5")
+region = Rect2(0, 30, 11, 15)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_c1b4b"]
 animations = [{
 "frames": [{
@@ -84,6 +97,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_yxww1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jb3kq")
+}],
+"loop": true,
+"name": &"robber idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_c1b4b")
 }, {
 "duration": 1.0,
@@ -98,13 +122,44 @@ animations = [{
 "loop": true,
 "name": &"robber left",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1sy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sm1rv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1sy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jx0ln")
+}],
+"loop": true,
+"name": &"robber right",
+"speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qfo5"]
+size = Vector2(10, 6)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1032090806]
-position = Vector2(1, 10)
+collision_mask = 2
 script = ExtResource("1_wfnr8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=363403068]
+scale = Vector2(0.9, 1)
 sprite_frames = SubResource("SpriteFrames_c1b4b")
-animation = &"robber front"
+animation = &"robber idle"
 script = ExtResource("4_px5sl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1116370329]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_0qfo5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1532569991]
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 1280

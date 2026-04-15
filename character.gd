@@ -18,11 +18,11 @@ func update_animation(direction):
 		return
 	if direction.length() > 0:
 		#movement direction-based animation
-		if abs(direction.x) > abs(direction.y):
+		if abs(direction.x) > 0:
 			if direction.x > 0:
-				animated_sprite.play("robber front")
+				animated_sprite.play("robber right")
 			else:
-				animated_sprite.play("robber front")
+				animated_sprite.play("robber left")
 		else:
 			if direction.y > 0:
 				animated_sprite.play("robber front")
@@ -30,4 +30,4 @@ func update_animation(direction):
 				animated_sprite.play("robber back")
 	else:
 		#idle animation
-		animated_sprite.play("robber front")
+		animated_sprite.play("robber idle")
