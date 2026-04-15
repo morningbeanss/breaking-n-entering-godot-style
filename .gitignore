@@ -3,6 +3,16 @@
 /android/
 .import/
 .export/
+/export/
 .export_presets.cfg
 *.tmp
 *.log
+
+*.uid
+*.import
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+*.translation
