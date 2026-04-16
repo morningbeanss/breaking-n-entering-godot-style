@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bffs0mpyhxwm4"]
 
 [ext_resource type="Texture2D" uid="uid://o3cilc3dr56l" path="res://assets/characters/robber_back.png" id="1_pjt0s"]
-[ext_resource type="Script" uid="uid://ct0yk2op8jx46" path="res://character.gd" id="1_wfnr8"]
+[ext_resource type="Script" uid="uid://ct0yk2op8jx46" path="res://Player/character.gd" id="1_wfnr8"]
 [ext_resource type="Texture2D" uid="uid://c5g0piyquj6rl" path="res://assets/characters/robber_front.png" id="2_wa5vi"]
 [ext_resource type="Texture2D" uid="uid://drsr3ls82fdeo" path="res://assets/characters/robber_left.png" id="4_0qfo5"]
-[ext_resource type="Script" uid="uid://br2hubxubbstu" path="res://animated_sprite_2d.gd" id="4_px5sl"]
+[ext_resource type="Script" uid="uid://br2hubxubbstu" path="res://Player/animated_sprite_2d.gd" id="4_px5sl"]
 [ext_resource type="Texture2D" uid="uid://dlnp6y8vo23us" path="res://assets/characters/robber_right.png" id="5_0qfo5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wfnr8"]

@@ -2,4 +2,5 @@
 
 [ext_resource type="PackedScene" uid="uid://dxx0rrxcegpsk" path="res://assets/inventory.tmj" id="1_pohso"]
 
-[node name="inventory" unique_id=1333253047 instance=ExtResource("1_pohso")]
+[node name="inventory" unique_id=908305164 instance=ExtResource("1_pohso")]
+scale = Vector2(0.5, 0.5)

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dg7m3m1a2jy5i"]
+
+[ext_resource type="Script" uid="uid://cywjvnnjetgqf" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b8lwm1y0ne0hr" path="res://UI/inventory.tscn" id="1_1bvp3"]
+
+[node name="Main" type="Node2D" unique_id=1251705608]
+script = ExtResource("1_0xm2m")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=132693135]
+
+[node name="inventory" parent="HUD" unique_id=908305164 instance=ExtResource("1_1bvp3")]
+visible = false
+
+[node name="World" type="Node2D" parent="." unique_id=2112571222]

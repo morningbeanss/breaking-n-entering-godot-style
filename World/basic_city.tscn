@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://c1c40a1a1ewtj" path="res://assets/urban1.png" id="1_6mvqr"]
 [ext_resource type="PackedScene" uid="uid://di6w4gcsmlu3s" path="res://assets/basicCity.tmj" id="1_r5pba"]
 [ext_resource type="Texture2D" uid="uid://dpiuljqk63gqw" path="res://assets/urban2.png" id="2_bd1m6"]
-[ext_resource type="PackedScene" uid="uid://bffs0mpyhxwm4" path="res://character.tscn" id="3_iqj78"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6mvqr"]
 texture = ExtResource("1_6mvqr")
@@ -282,6 +281,3 @@ scale = Vector2(5, 5)
 
 [node name="buildings" parent="." index="1" unique_id=1054322831]
 tile_set = SubResource("TileSet_iqj78")
-
-[node name="CharacterBody2D" parent="." index="7" unique_id=1032090806 instance=ExtResource("3_iqj78")]
-position = Vector2(151.99998, 177.99998)
