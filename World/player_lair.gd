@@ -1,11 +1,10 @@
 extends Node2D
 
-@onready var spawn_point = $Door/SpawnPoint 
-signal exited
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@onready var spawn_point = $Door/SpawnPoint.position
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+# room state will be stored here eventually
+
+signal exited(door_id) # mirrors door/entered(door_id)
+
+func _on_door_entered(door_id): # bubbling up the door's message to main
+	emit_signal("exited", door_id)

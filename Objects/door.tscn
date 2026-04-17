@@ -4,7 +4,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vkudc"]
 
-[node name="Door" type="Area2D" unique_id=99764253]
+[node name="Door" type="Area2D" unique_id=99764253 groups=["door", "interactable"]]
+z_index = 1
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_5xojw")
 

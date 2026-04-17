@@ -281,11 +281,18 @@ sources/1 = SubResource("TileSetAtlasSource_bd1m6")
 scale = Vector2(5, 5)
 
 [node name="Door" parent="." index="0" unique_id=99764253 instance=ExtResource("2_mupux")]
-z_index = 1
 position = Vector2(247.6, 137.4)
+door_id = "player_lair"
 
-[node name="buildings" parent="." index="2" unique_id=1054322831]
+[node name="Door2" parent="." index="1" unique_id=789945809 instance=ExtResource("2_mupux")]
+position = Vector2(24, 152.8)
+
+[node name="Door3" parent="." index="2" unique_id=1933554548 instance=ExtResource("2_mupux")]
+position = Vector2(240.8, 232.6)
+scale = Vector2(1.2, 0.8)
+
+[node name="buildings" parent="." index="4" unique_id=1054322831]
 tile_set = SubResource("TileSet_iqj78")
 
-[node name="door" parent="." index="5" unique_id=2064219553]
+[node name="door" parent="." index="7" unique_id=2064219553]
 position = Vector2(0, 0)

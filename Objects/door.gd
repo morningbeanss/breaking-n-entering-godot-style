@@ -1,13 +1,8 @@
 extends Area2D
 
 @export var door_id: String
-@export var path: String
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+signal entered(door_id) # will be read in main
 
-
-func _on_body_entered(body):
-	if body.is_in_group("player"):
-		emit_signal("excited") #
+func interact():
+	emit_signal("entered", door_id) # player will call interact
