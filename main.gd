@@ -1,31 +1,43 @@
 extends Node2D
 
-var current_level = null
+var current_scene = null
+var player_overworld_position = Vector2.ZERO
+
+@onready var world = $World
+@onready	 var player = $World/Player
+
 var levels = [
 	"res://World/basic_city.tscn",
 	"res://World/player_lair.tscn"
 ]
-var current_level_index = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	load_level(current_level_index)
+	player.position = player_overworld_position
 	
-func load_level(index: int):
-	if current_level:
-		current_level.queue_free()
+func load_overworld():
+	if current_scene:
+		current_scene.queue_free()
+		current_scene = null
 		
-	var level_scene = load(levels[index])
+	if not $World.has_node("basic_city"):
+		var overworld_scene = load(levels[0])
+		var overworld = overworld_scene.instantiate()
+		world.add_child(overworld)
+		
+		player.position = player_overworld_position
+		player.show()
+		
+func enter_building(interior_path: String):
+	var interior_scene = load(interior_path)
+	current_scene = interior_scene.insantiate()
+	world.add_child(current_scene)
 	
-	current_level = level_scene.instantiate()
-	$World.add_child(current_level)
+	current_scene.exited.connect(load_overworld)
 	
-	current_level.level_completed.connect(_on_level_completed)
+	#set player position
+	
 
-func _on_level_completed():
-	current_level_index += 1
 	
-	if current_level_index >= levels.size():
-		print("Game Complete!")
-	else:
-		load_level(current_level_index)
+
 		

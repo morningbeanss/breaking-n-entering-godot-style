@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://b4ungvra7n76g"]
 
-[ext_resource type="Texture2D" uid="uid://c1c40a1a1ewtj" path="res://assets/urban1.png" id="1_6mvqr"]
-[ext_resource type="PackedScene" uid="uid://di6w4gcsmlu3s" path="res://assets/basicCity.tmj" id="1_r5pba"]
-[ext_resource type="Texture2D" uid="uid://dpiuljqk63gqw" path="res://assets/urban2.png" id="2_bd1m6"]
+[ext_resource type="PackedScene" uid="uid://di6w4gcsmlu3s" path="res://assets/basicCity.tmj" id="1_mreel"]
+[ext_resource type="PackedScene" uid="uid://biwpocys0aek6" path="res://Objects/door.tscn" id="2_mupux"]
+[ext_resource type="Texture2D" uid="uid://c1c40a1a1ewtj" path="res://assets/urban1.png" id="2_ypvry"]
+[ext_resource type="Texture2D" uid="uid://dpiuljqk63gqw" path="res://assets/urban2.png" id="3_mupux"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6mvqr"]
-texture = ExtResource("1_6mvqr")
+texture = ExtResource("2_ypvry")
 separation = Vector2i(1, 1)
 11:8/0 = 0
 11:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -47,7 +48,7 @@ separation = Vector2i(1, 1)
 5:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bd1m6"]
-texture = ExtResource("2_bd1m6")
+texture = ExtResource("3_mupux")
 separation = Vector2i(1, 1)
 2:20/0 = 0
 2:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -276,8 +277,15 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_6mvqr")
 sources/1 = SubResource("TileSetAtlasSource_bd1m6")
 
-[node name="basicCity" unique_id=1919981970 instance=ExtResource("1_r5pba")]
+[node name="basicCity" unique_id=1919981970 instance=ExtResource("1_mreel")]
 scale = Vector2(5, 5)
 
-[node name="buildings" parent="." index="1" unique_id=1054322831]
+[node name="Door" parent="." index="0" unique_id=99764253 instance=ExtResource("2_mupux")]
+z_index = 1
+position = Vector2(247.6, 137.4)
+
+[node name="buildings" parent="." index="2" unique_id=1054322831]
 tile_set = SubResource("TileSet_iqj78")
+
+[node name="door" parent="." index="5" unique_id=2064219553]
+position = Vector2(0, 0)

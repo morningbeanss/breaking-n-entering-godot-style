@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://cpqoqmjgljyqe"]
 
-[ext_resource type="PackedScene" uid="uid://d2itoo8djcfgo" path="res://assets/player_lair.tmj" id="1_kcm5k"]
-[ext_resource type="Texture2D" uid="uid://c1c40a1a1ewtj" path="res://assets/urban1.png" id="2_15kvl"]
-[ext_resource type="Texture2D" uid="uid://dpiuljqk63gqw" path="res://assets/urban2.png" id="3_ohrro"]
-[ext_resource type="Texture2D" uid="uid://bknmebke8igvy" path="res://assets/interior2/Tiled_files/Interior.png" id="4_4wkbm"]
-[ext_resource type="Texture2D" uid="uid://pjfm7qyhjwmr" path="res://assets/kennyIndoor_transparent.png" id="5_26r23"]
+[ext_resource type="PackedScene" uid="uid://d2itoo8djcfgo" path="res://assets/player_lair.tmj" id="1_yo75t"]
+[ext_resource type="Script" uid="uid://bnlrhciouhadx" path="res://World/player_lair.gd" id="2_mw85j"]
+[ext_resource type="Texture2D" uid="uid://c1c40a1a1ewtj" path="res://assets/urban1.png" id="3_8ng45"]
+[ext_resource type="Texture2D" uid="uid://dpiuljqk63gqw" path="res://assets/urban2.png" id="4_b385j"]
+[ext_resource type="Texture2D" uid="uid://bknmebke8igvy" path="res://assets/interior2/Tiled_files/Interior.png" id="5_bfnuu"]
+[ext_resource type="Texture2D" uid="uid://pjfm7qyhjwmr" path="res://assets/kennyIndoor_transparent.png" id="6_yis01"]
+[ext_resource type="PackedScene" uid="uid://biwpocys0aek6" path="res://Objects/door.tscn" id="7_mw85j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15kvl"]
-texture = ExtResource("2_15kvl")
+texture = ExtResource("3_8ng45")
 separation = Vector2i(1, 1)
 17:4/0 = 0
 17:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -49,14 +51,14 @@ separation = Vector2i(1, 1)
 12:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ohrro"]
-texture = ExtResource("3_ohrro")
+texture = ExtResource("4_b385j")
 separation = Vector2i(1, 1)
 27:19/0 = 0
 35:9/0 = 0
 26:22/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wkbm"]
-texture = ExtResource("4_4wkbm")
+texture = ExtResource("5_bfnuu")
 8:6/0 = 0
 9:6/0 = 0
 10:6/0 = 0
@@ -72,7 +74,7 @@ texture = ExtResource("4_4wkbm")
 8:23/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_26r23"]
-texture = ExtResource("5_26r23")
+texture = ExtResource("6_yis01")
 separation = Vector2i(1, 1)
 6:0/0 = 0
 15:16/0 = 0
@@ -98,7 +100,7 @@ sources/2 = SubResource("TileSetAtlasSource_4wkbm")
 sources/3 = SubResource("TileSetAtlasSource_26r23")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7ctd"]
-texture = ExtResource("2_15kvl")
+texture = ExtResource("3_8ng45")
 separation = Vector2i(1, 1)
 17:4/0 = 0
 18:4/0 = 0
@@ -138,14 +140,14 @@ separation = Vector2i(1, 1)
 12:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x8c1w"]
-texture = ExtResource("3_ohrro")
+texture = ExtResource("4_b385j")
 separation = Vector2i(1, 1)
 27:19/0 = 0
 35:9/0 = 0
 26:22/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r3r18"]
-texture = ExtResource("4_4wkbm")
+texture = ExtResource("5_bfnuu")
 8:6/0 = 0
 9:6/0 = 0
 10:6/0 = 0
@@ -161,7 +163,7 @@ texture = ExtResource("4_4wkbm")
 8:23/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fk467"]
-texture = ExtResource("5_26r23")
+texture = ExtResource("6_yis01")
 separation = Vector2i(1, 1)
 6:0/0 = 0
 15:16/0 = 0
@@ -191,8 +193,9 @@ sources/1 = SubResource("TileSetAtlasSource_x8c1w")
 sources/2 = SubResource("TileSetAtlasSource_r3r18")
 sources/3 = SubResource("TileSetAtlasSource_fk467")
 
-[node name="player_lair" unique_id=1610700563 instance=ExtResource("1_kcm5k")]
+[node name="player_lair" unique_id=1610700563 instance=ExtResource("1_yo75t")]
 scale = Vector2(5.32, 5)
+script = ExtResource("2_mw85j")
 
 [node name="walls" parent="." index="0" unique_id=472239499]
 tile_set = SubResource("TileSet_o7ctd")
@@ -208,3 +211,11 @@ position = Vector2(0, 0)
 
 [node name="door" parent="." index="5" unique_id=702318854]
 position = Vector2(0, 0)
+
+[node name="Door" parent="." index="6" unique_id=99764253 instance=ExtResource("7_mw85j")]
+position = Vector2(40.037594, 41.2)
+
+[node name="SpawnPoint" parent="Door" index="1" unique_id=1923783617]
+position = Vector2(-0.2349624, 12.75)
+
+[editable path="Door"]
