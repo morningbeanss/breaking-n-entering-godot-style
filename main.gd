@@ -26,27 +26,32 @@ func load_overworld(door_id: String):
 		#save scene state
 		current_scene.queue_free() # deleting the scene safely
 		current_scene = null
+		#current_scene.hide()
 	
 	# only has to run once
 	if not world.has_node("overworld"):
-		var overworld_scene = load(levels[0])
+		var overworld_scene = load(levels["overworld"])
 		var overworld = overworld_scene.instantiate()
+		overworld.name = "overworld"
 		world.add_child(overworld)
 		
 		
 	player.position = player_overworld_position
-	for door in world.overworld.get_children():
+	for door in world.get_node("overworld").get_children():
 		if door.is_in_group("door"):
 			if door.door_id == door_id:
-				player.position = door.SpawnPoint.position
+				player.position = door.position + door.get_node("SpawnPoint").position
+				print("found door, player position: " + str(player.global_position))
 		
 	player.show()
 	
-	world.overworld.show() # we know that the node is there
+	world.get_node("overworld").show() # we know that the node is there
+	world.get_node("overworld").exited.connect(enter_building)
 
 
 func enter_building(door_id: String):
-	if not player.hide():
+	print("door ID: " + door_id)
+	if player.visible:
 		player.hide()
 	
 	if world.has_node("overworld"):
@@ -56,8 +61,10 @@ func enter_building(door_id: String):
 	current_scene = interior_scene.instantiate()
 	world.add_child(current_scene)
 	
-	player.position = current_scene.spawn_point # set player's location
-	
+	player.position = current_scene.spawn_point.position# set player's location
+	#player.position += Vector2(200, 200)
+	print(player.global_position)
+	#print("scene position: " + str(current_scene.position))
 	current_scene.exited.connect(load_overworld) # JUST LINKS THE VARIABLES
 	# when the current scene sends an exit signal
 	# return to the main hub

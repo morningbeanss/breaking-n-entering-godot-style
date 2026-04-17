@@ -7,3 +7,5 @@ $ - shorthand for the getnode() function
 Doors contain spawn points, scenes contain doors 
 Doors have a Door_ID that corresponds to their other side
 in another scene
+
+player position should be 

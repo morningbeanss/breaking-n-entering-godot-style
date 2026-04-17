@@ -5,4 +5,5 @@ extends Area2D
 signal entered(door_id) # will be read in main
 
 func interact():
+	print("door interacted with")
 	emit_signal("entered", door_id) # player will call interact
