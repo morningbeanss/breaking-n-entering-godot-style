@@ -5,7 +5,10 @@
 $ - shorthand for the getnode() function
 
 Doors contain spawn points, scenes contain doors 
-Doors have a Door_ID that corresponds to their other side
+Doors have a Door ID that corresponds to their other side
 in another scene
 
-player position should be 
+player position should be calculated from this 
+
+GameManager is an autoload singleton (kind of like the game class in other engines),
+use it to store persistent data like the state of scenes and anything else that is persistent

@@ -39,7 +39,7 @@ func load_overworld(door_id: String):
 		if door.is_in_group("door"):
 			if door.door_id == door_id:
 				player.position = door.position + door.get_node("SpawnPoint").position
-				#print("found door, player position: " + str(player.global_position))
+				#	print("found door, player position: " + str(player.global_position))
 		
 	
 	
