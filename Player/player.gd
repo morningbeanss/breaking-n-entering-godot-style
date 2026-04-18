@@ -40,16 +40,16 @@ func update_animation() -> void:
 func _process(_delta: float) -> void:
 	
 	if current_interactable and Input.is_action_just_pressed("interact"): # not yet implemented
-		print("interact pressed")
+		#print("interact pressed")
 		current_interactable.interact() # function varies object to object
 	update_animation()
 
 func _on_interaction_area_area_entered(area):
 	if area.is_in_group("interactable"):
-		print("entered")
+		#print("entered")
 		current_interactable = area
 
 func _on_interaction_area_area_exited(area):
 	if area.is_in_group("interactable"):
-		print("exited")
+		#print("exited")
 		current_interactable = null
