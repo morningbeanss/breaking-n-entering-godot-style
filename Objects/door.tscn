@@ -13,3 +13,4 @@ script = ExtResource("1_5xojw")
 shape = SubResource("RectangleShape2D_vkudc")
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1923783617]
+position = Vector2(0, 9.999999)

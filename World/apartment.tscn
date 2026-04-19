@@ -2,4 +2,4 @@
 
 [ext_resource type="PackedScene" uid="uid://bvycivbv3b5fb" path="res://assets/apartment.tmj" id="1_yukv5"]
 
-[node name="apartment" unique_id=1373596434 instance=ExtResource("1_yukv5")]
+[node name="apartment" unique_id=1146841016 instance=ExtResource("1_yukv5")]

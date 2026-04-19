@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var spawn_point = $Door # world position + relative offset
+#@onready var spawn_point = $Door # world position + relative offset
 
 # room state will be stored here eventually
 

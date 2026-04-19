@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var door_id: String
+@onready var spawn_point = $SpawnPoint.position
 
 signal entered(door_id) # will be read in main
 
