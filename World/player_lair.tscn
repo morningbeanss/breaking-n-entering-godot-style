@@ -11,7 +11,8 @@ script = ExtResource("2_mw85j")
 z_index = 1
 
 [node name="shelf-decor" parent="." index="4" unique_id=1791833381]
-position = Vector2(0, 0)
+z_index = 1
+position = Vector2(-7.4, 6.4)
 
 [node name="door" parent="." index="5" unique_id=839058089]
 position = Vector2(0, 0)

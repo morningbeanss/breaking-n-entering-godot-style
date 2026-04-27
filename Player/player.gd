@@ -1,11 +1,7 @@
 extends CharacterBody2D
 
-## CONSTANTS
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
 ## VARIABLES
-@export var speed = 200
+@export var speed = 150
 @onready var animated_sprite = $AnimatedSprite2D
 var direction: Vector2 = Vector2.ZERO
 var current_interactable = null # could represent a door or an item
