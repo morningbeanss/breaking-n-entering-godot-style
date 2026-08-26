@@ -42,7 +42,7 @@ func _process(_delta: float) -> void:
 
 func _on_interaction_area_area_entered(area):
 	if area.is_in_group("interactable"):
-		#print("entered")
+		print("entered")
 		current_interactable = area
 
 func _on_interaction_area_area_exited(area):
